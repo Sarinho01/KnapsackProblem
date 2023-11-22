@@ -23,7 +23,7 @@ public class KnapsackProblem {
         for (int i = 1; i < answer.length; i++) {
 
             //  J é o peso atual
-            for (int j = 1; j <= backPackSize; j++) {
+            for (int j = 1; j < backPackSize + 1; j++) {
                 //  Peso do item atual
                 currentItemWeight = itemsWeight[i - 1];
 

@@ -5,6 +5,19 @@ import org.junit.jupiter.api.Test;
 class KnapsackProblemTest {
 
     @Test
+    void slideExample(){
+        int[] itemsProfit = {3000,2000,1500};
+        int[] itemsWeight = {4,3,1};
+        int backpackSize = 4;
+        KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
+
+        int actual = knapsackProblem.solve();
+        int expected = 3500;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     void test01NormalCase() {
         int[] itemsProfit = {1, 2, 3};
         int[] itemsWeight = {4, 5, 1};
@@ -56,4 +69,6 @@ class KnapsackProblemTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+
 }

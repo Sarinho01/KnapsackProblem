@@ -11,7 +11,7 @@ class KnapsackProblemTest {
         int backpackSize = 4;
         KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
 
-        int actual = knapsackProblem.solve();
+        int actual = knapsackProblem.solveOptmization();
         int expected = 3500;
 
         Assertions.assertEquals(expected, actual);
@@ -24,7 +24,7 @@ class KnapsackProblemTest {
         int backpackSize = 3;
         KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
 
-        int actual = knapsackProblem.solve();
+        int actual = knapsackProblem.solveOptmization();
         int expected = 3;
 
         Assertions.assertEquals(expected, actual);
@@ -37,7 +37,7 @@ class KnapsackProblemTest {
         int backpackSize = 3;
         KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
 
-        int actual = knapsackProblem.solve();
+        int actual = knapsackProblem.solveOptmization();
         int expected = 0;
 
         Assertions.assertEquals(expected, actual);
@@ -51,7 +51,7 @@ class KnapsackProblemTest {
         int backpackSize = 3;
         KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
 
-        int actual = knapsackProblem.solve();
+        int actual = knapsackProblem.solveOptmization();
         int expected = 0;
 
         Assertions.assertEquals(expected, actual);
@@ -64,7 +64,7 @@ class KnapsackProblemTest {
         int backpackSize = 9;
         KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize, itemsWeight, itemsProfit);
 
-        int actual = knapsackProblem.solve();
+        int actual = knapsackProblem.solveOptmization();
         int expected = 28;
 
         Assertions.assertEquals(expected, actual);

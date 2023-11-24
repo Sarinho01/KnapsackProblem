@@ -1,6 +1,7 @@
 import org.saros.KnapsackProblem;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.saros.SubsetSumProblem;
 
 class KnapsackProblemTest {
 
@@ -68,6 +69,72 @@ class KnapsackProblemTest {
         int expected = 28;
 
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void test05SubsetSumAndKnapsackSameResult(){
+        int[] itemsProfit = {1,4,7};
+        int[] itemsWeight = {1,4,7};
+        int backpackSize =  9;
+        int resultExpectedValue = 9;
+        KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize,itemsWeight,itemsProfit, resultExpectedValue);
+
+        int[] set = itemsProfit;
+        int targetSum = backpackSize;
+        SubsetSumProblem subsetSumProblem = new SubsetSumProblem(set, targetSum);
+
+
+        boolean knapsackResult = knapsackProblem.solveDecision();
+        boolean subsetSumResult = subsetSumProblem.solve();
+
+        System.out.println("Knapsack Result = "+knapsackResult);
+        System.out.println("SubsetSum Result = "+subsetSumResult);
+
+        Assertions.assertEquals(knapsackResult, subsetSumResult);
+    }
+
+    @Test
+    void test06SubsetSumAndKnapsackSameResult(){
+        int[] itemsProfit = {1,4,7};
+        int[] itemsWeight = {1,4,7};
+        int backpackSize = 10;
+        int resultExpectedValue = 10;
+        KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize,itemsWeight,itemsProfit, resultExpectedValue);
+
+        int[] set = itemsProfit;
+        int targetSum = backpackSize;
+        SubsetSumProblem subsetSumProblem = new SubsetSumProblem(set, targetSum);
+
+
+        boolean knapsackResult = knapsackProblem.solveDecision();
+        boolean subsetSumResult = subsetSumProblem.solve();
+
+        System.out.println("Knapsack Result = "+knapsackResult);
+        System.out.println("SubsetSum Result = "+subsetSumResult);
+
+        Assertions.assertEquals(knapsackResult, subsetSumResult);
+    }
+
+    @Test
+    void test07SubsetSumAndKnapsackSameResult(){
+        int[] itemsProfit = {1,2,3,4,5};
+        int[] itemsWeight = {1,2,3,4,5};
+        int backpackSize =  15;
+        int resultExpectedValue = 15;
+        KnapsackProblem knapsackProblem = new KnapsackProblem(backpackSize,itemsWeight,itemsProfit, resultExpectedValue);
+
+        int[] set = itemsProfit;
+        int targetSum = backpackSize;
+        SubsetSumProblem subsetSumProblem = new SubsetSumProblem(set, targetSum);
+
+
+        boolean knapsackResult = knapsackProblem.solveDecision();
+        boolean subsetSumResult = subsetSumProblem.solve();
+
+        System.out.println("Knapsack Result = "+knapsackResult);
+        System.out.println("SubsetSum Result = "+subsetSumResult);
+
+        Assertions.assertEquals(knapsackResult, subsetSumResult);
     }
 
 
